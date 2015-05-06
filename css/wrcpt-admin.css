@@ -1,0 +1,117 @@
+div.wrap .wrcpt-clear {clear:both}
+div#add_new_table h2 {font-size: 24px;font-weight: 700;}
+div#add_new_table h2 a.add-new-h2 {font-style: normal;font-size: 14px;font-weight: 700;}
+div#add_new_table #wrcpt_new {display:none}
+div.wrap div#add_new_table h2 span#wrcpt-loading-image {background: url(../images/ajax-loader.gif) no-repeat 0 0;margin: -3px 10px;width: 96px;height: 20px;display:none;}
+
+/* Pricing Table Lists */
+div#add_new_table div.table_list {width: 97%;margin-top: 15px;}
+div#add_new_table div.table_list p.get_started, div#add_new_table div.table_list p.feature_notice {background-color: #fff;padding: 10px;font-size: 14px;line-height: 24px;border-left: 4px solid #7ad03a;-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);}
+div#add_new_table div.table_list p.feature_notice {width:485px;text-align: center;padding-left:0;}
+div#add_new_table div.table_list table {border-collapse: collapse; margin: 0; text-align: left; width: 100%;}
+div#add_new_table div.table_list table td, div#add_new_table .table_list table th {padding: 10px;}
+div#add_new_table div.table_list table thead th {background-color:#fff; width: auto; color:#333; font-size: 14px;}
+div#add_new_table div.table_list table thead th:first-child {border: none;}
+div#add_new_table div.table_list table tbody tr {background-color: #F9F9F9;}
+div#add_new_table div.table_list table tbody td {color: #007193;font-size: 16px;font-weight: normal;height: 50px; vertical-align: 0;}
+div#add_new_table div.table_list table tbody .alt td {background: #FFFFFF;}
+div#add_new_table div.table_list table tbody td:first-child {border-left: none;}
+div#add_new_table div.table_list table tbody tr:last-child td {border-bottom: none;}
+div#add_new_table div.table_list table tbody td.table_name div {padding-bottom: 5px;cursor:pointer;}
+div#add_new_table div.table_list table tbody td.table_name {width: 45%;}
+div#add_new_table div.table_list table tbody td.table_name span:first-of-type {border: none;padding-left: 0;}
+div#add_new_table div.table_list table tbody td.table_name span {font-size: 14px;cursor: pointer;border-left: 1px solid #ddd;color: #0074a2;padding-left: 5px;}
+div#add_new_table div.table_list table tbody td.table_name span:hover {color: #2ea2cc;}
+div#add_new_table div.table_list table tbody td.wrc_shortcode {color: #000000;}
+div#add_new_table div.table_list table tbody td.wrcpt_notice {width: 40%;}
+div#add_new_table div.table_list table tbody td.wrcpt_notice span {font-size: 13px;color: #778899;}
+div#add_new_table div.table_list table tbody td.wrcpt_notice span strong {font-weight: 700;}
+div#add_new_table div#tablenamediv {width: 488px;background-color: #eee;border: 1px solid #ccc;border-radius: 5px;margin-top: 10px;line-height: 0;}
+
+/* Features */
+div#add_new_table .tablenamewrap, div#add_new_table .pricingfeaturewrap, div#add_new_table .tablecolumnwrap, div#add_new_table .settingcolumnwrap {margin:10px;}
+div#add_new_table #title{display: block;margin: 10px 0 20px;line-height: 30px;font-size: 18px;}
+div#add_new_table div#pricingfeaturediv table#feature_additem, div#add_new_table div#pricingfeaturediv table#feature_edititem {border: 1px solid #ddd;margin-bottom: 10px;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featheader th, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featheader th {background-color: #F3F3F3;padding: 15px 10px;border-bottom: 1px solid #ddd;border-left: 1px solid #ddd;font-size: 14px;font-weight: 700;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td {background-color: #fff;padding: 1px 6px 0px;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;line-height: 48px;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featheader th:first-child, div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td:first-child, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featheader th:first-child, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td:first-child {border-left: none;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td input[type="text"] {width: 269px;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td select#feature_type, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td select#feature_type {height: auto;vertical-align: initial;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td span#remFeatute, div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td span#remDisable, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td span#remFeatute {border: 1px solid #ddd;margin: 0 18px;padding: 0px 11px;color: #444444;border-radius: 3px;position: relative;line-height: 0;font-size: 16px;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td span#remDisable {background: url(../images/wrcpt-buttons.png) no-repeat -5px -81px;width:16px;height:16px;cursor: default;}
+div#add_new_table div#pricingfeaturediv table#feature_additem tr.featurebody td span#remFeatute, div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td span#remFeatute {cursor: pointer !important;background: url(../images/wrcpt-buttons.png) no-repeat -5px -60px;width: 16px;height: 16px;}
+div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featheader th {text-align: center;}
+div#add_new_table div#pricingfeaturediv table#feature_edititem tr.featurebody td {cursor:move;}
+div#add_new_table input#wrcpt_add_new, div#add_new_table input#wrcpt_upfeature, div#add_new_table input#wrcpt_addfeature {float:right;margin-top:10px;}
+div#add_new_table input#wrcpt_add, div#add_new_table input#wrcpt_edit {margin-top: 10px;}
+
+/* Pricing Columns Preview */
+div#add_new_table div#tabledisplaydiv {background: #fff;border: 1px solid #ccc;border-radius: 5px;padding: 10px;line-height: 5px;}
+div#add_new_table div#tabledisplaydiv h3 {font-size: 24px;margin-top: 15px;padding: 10px;}
+div#add_new_table div#tabledisplaydiv h3 span#editPackages {float: right;margin-right: 30px;font-size: 14px;}
+div#add_new_table div#tabledisplaydiv h3 span#editPackages:before {content: "";background: url(../images/wrcpt-buttons.png) no-repeat -10px -163px;width: 16px;height: 16px;margin: 7px 5px 0 0;display: inline-block;}
+
+/* Pricing Columns */
+div#add_new_table div#tablecolumndiv {float:left;background-color:#eee;border:1px solid #ccc;border-radius:5px;margin-top:10px;padding-bottom:5px;line-height:5px;}
+div#tablecolumndiv div#addButtons {clear: both;margin-bottom: 5px;}
+div#tablecolumndiv div#addButtons a#addPackage {padding: 0 10px;font-size: 14px;height: 30px;line-height: 28px;vertical-align: top;}
+div#tablecolumndiv div#addButtons a#addPackage:before {content: "";background: url(../images/wrcpt-buttons.png) no-repeat -10px -143px;width: 16px;height: 16px;margin: 7px 5px 0 0;display: inline-block;}
+div#tablecolumndiv div#sortable_column {margin-left: -5px;}
+div#tablecolumndiv div#sortable_column div.package_details h3.ptitle {margin: 1px;}
+div#tablecolumndiv div.package_details {float: left;display: inline-block;margin: 5px;position: relative;}
+div#tablecolumndiv div.package_details h4 {margin: 0;padding: 10px 0px 13px 2px;font-size: 15px;}
+div#tablecolumndiv div.package_details span#delDisable, div#tablecolumndiv div.package_details span#delPackage {width: 24px;height: 24px;position: absolute;top: 4px;right: 6px;border: 1px solid #aaa;border-radius: 3px;display: inline-block;z-index: 9999;}
+div#tablecolumndiv div.package_details span#delDisable {background: #F1F1F1 url(../images/wrcpt-buttons.png) no-repeat -4px -80px;}
+div#tablecolumndiv div.package_details span#delPackage {background: #F1F1F1 url(../images/wrcpt-buttons.png) no-repeat -4px -59px;cursor: pointer;}
+/*div#tablecolumndiv div.element-input {overflow: visible !important;}*/
+div#tablecolumndiv div.element-input h4 {margin: 0;padding: 5px 10px 15px;font-weight: 700;color: #555555;}
+div#tablecolumndiv div.element-input input.medium {width: 230px;}
+div#tablecolumndiv div.element-input input.col_price {width: 105px;}
+div#tablecolumndiv div.element-input label.input-check {}
+div#tablecolumndiv div.element-input input.tickbox {border: 1px solid #aaa !important;}
+div#tablecolumndiv div.element-input textarea[id=package_desc], div#tablecolumndiv div.element-input textarea[id=tooltips] {resize: none;display: block;margin: 0 0 20px 160px;border-radius: 5px;border: 1px solid #ccc;width: 341px;}
+div#tablecolumndiv div.element-input hr {width: 490px;border-top: 1px solid #E6E6E6;}
+
+/* Pricing Column Common */
+div#tablecolumndiv div.package_details, div#settingcolumndiv div.package_advance {background: #DCDCDC;width: 525px;padding: 5px;border: 1px solid #ccc;border-radius: 3px;}
+div#tablecolumndiv div.element-input, div#add_new_table div.advance-input {background: #fff;width: 511px;margin-left: 1px;padding: 10px;border: 1px solid #ccc;cursor: auto;}
+div#add_new_table div.package_details h3.ptitle, div#add_new_table div.package_advance h3.ptitle {background: #fff;border: 1px solid #ccc;}
+div#add_new_table div.package_details h3.ptitle:hover, div#add_new_table div.package_advance h3.ptitle:hover {background: #EEEEEE;border: 1px solid #ccc;}
+div#tablecolumndiv div.element-input label.input-title, div#add_new_table div.advance-input label.input-title, div#add_new_table div.element-input label.input-check, div#add_new_table div.advance-input label.input-check {color:#555555;margin-top: 1px;padding:5px 10px;float:left;font-size: 14px;width: 250px;}
+div#add_new_table div.element-input input.medium, div#tablecolumndiv div.element-input input.col_price, div#add_new_table div.element-input input.tickbox, div#add_new_table div.advance-input input.medium, div#add_new_table div.advance-input input.tickbox {padding: 4px;border-radius: 5px;border: 1px solid #ccc;}
+div#add_new_table div.element-input input.medium, div#tablecolumndiv div.element-input input.col_price, div#add_new_table div.advance-input input.medium {margin: 0 2px 10px;}
+div#add_new_table div.element-input input.tickbox, div#add_new_table div.advance-input input.tickbox {margin: 7px 2px 10px;}
+div#add_new_table div.element-input table tr.table-header, div#add_new_table div.element-input table tr.table-input, div#add_new_table div.advance-input table tr.table-header, div#add_new_table div.advance-input table tr.table-input {background-color: #fff;}
+div#add_new_table div.element-input table tr.table-input th, div#add_new_table div.advance-input table tr.table-input th {padding: 5px 0;}
+div#add_new_table div.element-input table tr.table-input th label.input-title, div#add_new_table div.advance-input table tr.table-input th label.input-title {font-size: 12px;width: 200px;}
+div#add_new_table div.element-input table tr.table-header td, div#add_new_table div.advance-input table tr.table-header td {color: #555555;font-weight: 700;padding-bottom: 10px;}
+div#add_new_table div.element-input table tr td, div#add_new_table div.advance-input table tr td {height: auto;padding: 5px 10px 0;}
+div#tablecolumndiv a.wp-color-result, div#settingcolumndiv a.wp-color-result {margin: 2px 2px 0 0;}
+div#tablecolumndiv div.wp-picker-container input[type=text].wp-color-picker, div#tablecolumndiv .button.button-small, div#settingcolumndiv div.wp-picker-container input[type=text].wp-color-picker, div#settingcolumndiv .button.button-small {margin:2px 2px 0 0 !important;font-size:12px;width:70px;}
+
+/* Pricing Column Settings */
+div#add_new_table div#settingcolumndiv {width: 562px;background-color: #eee;border: 1px solid #ccc;border-radius: 5px;margin-top: 10px;line-height: 0;}
+div#settingcolumndiv div.package_advance h3.ptitle {margin: 1px;}
+div#settingcolumndiv div.advance-input label.input-check {width: 280px;line-height: 28px;}
+div#settingcolumndiv div.advance-input input.medium {width: 230px;}
+div#settingcolumndiv div.advance-input input.tickbox {margin: 7px 2px 2px;float:right;border: 1px solid #aaa;}
+div#settingcolumndiv div.wp-picker-container, div#settingcolumndiv div.wp-picker-container:active {}
+
+/* pricing column tooltip */
+div#add_new_table a.wrc_tooltip {background: url(../images/wrcpt-buttons.png) no-repeat -10px -182px;width: 14px;height: 14px;margin: 0px 0px 0 5px;text-decoration: none;position: relative;display: inline-block;vertical-align: middle;font-weight: 400;color: #364D55}
+div#add_new_table a.wrc_tooltip:hover:after{background: #F8F8FF;border: 1px solid #aaa;-moz-border-radius: 5px;-webkit-border-radius: 5px;-o-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;top: -20px;left: 35px;color: #333;content: attr(rel);padding: 10px;position: absolute;z-index: 98;width: 225px;font-size: 12px;text-align: left;line-height: 20px;}
+div#add_new_table a.wrc_tooltip:hover:before{border: solid;border-color: transparent #aaa transparent transparent;border-width: 10px;bottom: -4px;content: "";left: 15px;position: absolute;z-index: 99;}
+
+/* Guide */
+div.wrcusage-maincontent{padding:0 20px 0 0}
+div.wrcusage-maincontent #poststuff{min-width:initial;padding-top:0}
+div.wrcusage-maincontent .borderTop {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;background: #fff;height: 74px;}
+div.wrcusage-maincontent .prepend-top {margin-top: 1.5em;margin-bottom: 21px;}
+div.wrcusage-maincontent .last {margin-right: 0;}
+div.wrcusage-maincontent .append-1 {padding-left: 10px;}
+
+/* Sidebar */
+div#sidebar {margin-top: 60px;}
+div#sidebar #wrcusage-features.wrcusage-sidebar, div#sidebar #wrcusage-info.wrcusage-sidebar {background-color:#fff;}
+div#sidebar .wrcusage-sidebar {position: relative;max-width: 255px;border: 1px solid #e5e5e5;-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);box-shadow: 0 1px 1px rgba(0,0,0,.04);margin-bottom: 16px;padding: 0 15px;}
+div#sidebar .wrcusage-list li {list-style: disc;margin: 0 0 5px 15px;}

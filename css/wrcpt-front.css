@@ -1,0 +1,76 @@
+*{outline:none}
+.wrcpt_container{max-width:1100px;margin:0 auto}
+.wrcpt_container:before, .wrcpt_container:after {display: table;line-height: 0;content: ""}
+.wrcpt_container:after {clear: both}
+.wrcpt_content {width:100%;font-weight:normal;color:#333;line-height:normal !important;margin: 30px auto}
+.wrcpt_content h2.caption {font-size: 36px;padding:0 10px 24px}
+.wrcpt_row {margin-left: -20px;}
+.wrcpt_row:before, .wrcpt_row:after {display: table;line-height: 0;content: ""}
+.wrcpt_row:after {clear: both}
+div.wrc_pricing_table {width:98%;margin: 0 auto}
+div.wrc_pricing_table a {color:#000;text-decoration:none}
+div.wrc_pricing_table h1 {font-size: 60px}
+div.wrc_pricing_table h2 {font-family: 'Roboto Condensed', sans-serif;font-size:24px}
+div.wrc_pricing_table h1 span.unit {font-size: 28px;}
+div.wrc_pricing_table h1 span.unit {vertical-align: text-top}
+div.wrc_pricing_table h1 span.cent {font-size: 28px;position: absolute;z-index: 98}
+div.wrc_pricing_table h1 span.plan {font-size: 16px;vertical-align: baseline}
+div.wrc_pricing_table ul {list-style-type: none;margin: 0;padding: 0 !important}
+div.wrc_pricing_table ul li {list-style-type: none;margin: 0}
+div.wrc_pricing_table h1, div.wrc_pricing_table h2, div.wrc_pricing_table h3 {margin: 0;font-weight: normal !important;border: 0 !important;display: inline-block;vertical-align: middle;line-height: normal}
+div.wrc_pricing_table .center {text-align: center}
+
+/* pricing column caption */
+div.wrc_pricing_table div.package_caption {float: left;width: 100%}
+div.wrc_pricing_table div.package_caption li.pricing_table_plan {color: #304153}
+div.wrc_pricing_table div.package_caption li.top_left_radius {-moz-border-radius-topleft: 10px;-webkit-border-top-left-radius: 10px;-khtml-border-top-left-radius: 10px;border-top-left-radius: 10px}
+div.wrc_pricing_table div.package_caption li.bottom_left_radius {-moz-border-radius-bottomleft: 10px;-webkit-border-bottom-left-radius: 10px;-khtml-border-bottom-left-radius: 10px;border-bottom-left-radius: 10px}
+div.wrc_pricing_table div.package_caption li.feature_style_2 {background-color: #DFDFDF}
+div.wrc_pricing_table div.package_caption li.feature_style_3 {background-color: #F5F5F5}
+div.wrc_pricing_table div.package_caption li.feature_style_2 span.caption, div.wrc_pricing_table div.package_caption li.feature_style_3 span.caption {padding-left: 10px;font-size: 14px;font-weight:400}
+
+/* common */
+div.wrc_pricing_table div.package_caption li.pricing_table_title, div.wrc_pricing_table div.package_details li.pricing_table_title {height: 40px;line-height: 40px;text-align: center}
+div.wrc_pricing_table div.package_caption li.pricing_table_plan, div.wrc_pricing_table div.package_details li.pricing_table_plan {height: 120px;text-align: center}
+div.wrc_pricing_table div.package_details li.feature_style_1, div.wrc_pricing_table div.package_caption li.feature_style_2, div.wrc_pricing_table div.package_caption li.feature_style_3 {width: 100%;height:40px;line-height:40px;float: left;position: relative;color: #364D55;font-weight: 700}
+
+/* pricing column details */
+div.wrc_pricing_table div.package_details {position: relative;float: left;width: 100%;margin-left:1px;-moz-transition: all 0.25s ease-in-out;-webkit-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out;transition: all 0.25s ease-in-out;z-index: 98}
+div.wrc_pricing_table div.package_details:hover {position: relative;-moz-transform: scale(1.05);-webkit-transform: scale(1.05);-o-transform: scale(1.05);-ms-transform: scale(1.05);transform: scale(1.05);z-index: 100;-moz-box-shadow: 0px 0px 5px #333;-webkit-box-shadow: 0px 0px 5px #333;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#333333');-ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color='#333333');box-shadow: 0px 0px 5px #333;-moz-border-radius-topleft: 10px;-webkit-border-top-left-radius: 10px;-khtml-border-top-left-radius: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;-webkit-border-top-right-radius: 10px;-khtml-border-top-right-radius: 10px;border-top-right-radius: 10px}
+div.wrc_pricing_table div.package_details span {background: none;border: 0}
+div.wrc_pricing_table div.package_details div.feat_cap {font-size: 14px;font-weight: 700;display: inline-block;vertical-align: middle;line-height: normal}
+div.wrc_pricing_table div.package_details li.title_top_radius {-moz-border-radius-topleft: 10px;-webkit-border-top-left-radius: 10px;-khtml-border-top-left-radius: 10px;border-top-left-radius: 10px;-moz-border-radius-topright: 10px;-webkit-border-top-right-radius: 10px;-khtml-border-top-right-radius: 10px;border-top-right-radius: 10px}
+div.wrc_pricing_table div.package_details li.bottom_right_radius {-moz-border-radius-bottomright: 10px;-webkit-border-bottom-right-radius: 10px;-khtml-border-bottom-right-radius: 10px;border-bottom-right-radius: 10px}
+div.wrc_pricing_table div.package_details li.feature_style_1 {background-color: #FAFAFA}
+div.wrc_pricing_table div.package_details li.feature_style_1 span, div.wrc_pricing_table div.package_details li.feature_style_2 span, div.wrc_pricing_table div.package_details li.feature_style_3 span {padding: 0 0 2px 5px;color: #2F4F4F;font-size: 12px;font-weight: 400}
+div.wrc_pricing_table div.package_details li.feature_style_2 span, div.wrc_pricing_table div.package_details li.feature_style_3 span {display: inline-block;vertical-align: middle;line-height: normal}
+div.wrc_pricing_table div.package_details a.feature_yes, div.wrc_pricing_table div.package_details a.feature_no {display: inline-block;vertical-align: middle;line-height: normal}
+div.wrc_pricing_table div.package_details a.feature_yes:before {background:url(../images/wrcpt-buttons.png) no-repeat -5px -5px;}
+div.wrc_pricing_table div.package_details a.feature_no:before {background: url(../images/wrcpt-buttons.png) no-repeat -5px -34px;}
+div.wrc_pricing_table div.package_details a.feature_yes:before, div.wrc_pricing_table div.package_details a.feature_no:before {width: 24px;height: 24px;display: inline-block;content: "";vertical-align: middle;line-height: normal;}
+
+/* pricing column button */
+div.wrc_pricing_table div.package_details li.pricing_table_button {background-color: #ccc;width: 100%;height: 40px;float: left;padding: 19px 0 0 !important;text-align: center;border-top: 1px solid rgba(0,0,0, 0.2);border-bottom: 1px solid rgba(0,0,0, 0.2)}
+div.wrc_pricing_table div.package_details li.pricing_table_button a.action_button {text-decoration: none;color: #fff;font-weight: bold;-moz-border-radius: 5px;-webkit-border-radius: 5px;-o-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;background: -moz-linear-gradient(#64C3DE, #3591CA);background: -webkit-gradient(linear, color-stop(#64C3DE), color-stop(#3591CA));background: -webkit-linear-gradient(#64C3DE, #3591CA);background: -o-linear-gradient(#64C3DE, #3591CA);background: -ms-linear-gradient(#64C3DE, #3591CA);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64C3DE', endColorstr='#3591CA',GradientType=1 );-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64C3DE', endColorstr='#3591CA',GradientType=1 );background: linear-gradient(#64C3DE, #3591CA);padding: 10px 20px;font-size: 11px;text-transform: uppercase}
+div.wrc_pricing_table div.package_details li.pricing_table_button a.action_button:hover {background: -moz-linear-gradient(#666, #333);background: -webkit-gradient(linear, color-stop(#666666), color-stop(#333333));background: -webkit-linear-gradient(#666, #333);background: -o-linear-gradient(#666, #333);background: -ms-linear-gradient(#666, #333);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=1 );-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=1 );background: linear-gradient(#666, #333);color: #000000}
+
+/* pricing column tooltip */
+div.wrc_pricing_table div.package_details div.text_tooltip, div.wrc_pricing_table div.package_details div.icon_tooltip {text-decoration: none;position: relative;border-bottom: 1px dotted #666;display: inline-block;vertical-align: middle;line-height: normal;font-weight: 700;color: #364D55;cursor: pointer;}
+div.wrc_pricing_table div.package_details div.text_tooltip:hover, div.wrc_pricing_table div.package_details div.icon_tooltip:hover {color:#666;border-bottom: 1px dotted #44A3D5}
+div.wrc_pricing_table div.package_details div.text_tooltip:hover:after{background: #333;-moz-border-radius: 5px;-webkit-border-radius: 5px;-o-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;bottom: 26px;color: #fff;content: attr(title);left: -15px;padding: 7px;position: absolute;z-index: 98;width: 90px;font-size: 10px;text-align: left}
+div.wrc_pricing_table div.package_details div.text_tooltip:hover:before{border: solid;border-color: #333 transparent;border-width: 6px 6px 0 6px;bottom: 21px;content: "";left: 0;position: absolute;z-index: 99}
+div.wrc_pricing_table div.package_details div.icon_tooltip:hover:after{background: #333;-moz-border-radius: 5px;-webkit-border-radius: 5px;-o-border-radius: 5px;-khtml-border-radius: 5px;border-radius: 5px;bottom: 32px;color: #fff;content: attr(title);left: -15px;padding: 7px;position: absolute;z-index: 98;width: 90px;font-size: 10px;text-align: left}
+div.wrc_pricing_table div.package_details div.icon_tooltip:hover:before{border: solid;border-color: #333 transparent;border-width: 6px 6px 0 6px;bottom: 27px;content: "";left: 5px;position: absolute;z-index: 99}
+
+/* pricing column ribbon */
+div.wrc_pricing_table div.package_details li.ribbon {display: block;height: 26px;max-width: 80%;position: absolute;top: 39px;right: -5px;color: #fff;background: -moz-linear-gradient(left, #fe0000, #cb0000);background: -webkit-linear-gradient(left, #fe0000, #cb0000);background: -o-linear-gradient(left, #fe0000, #cb0000);background: -ms-linear-gradient(left, #fe0000, #cb0000);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe0000', endColorstr='#cb0000', GradientType=1);-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe0000', endColorstr='#cb0000',GradientType=1 );background: linear-gradient(to right, #fe0000, #cb0000);-moz-box-shadow: 0 1px 3px #000;-webkit-box-shadow: 0 1px 3px #000;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180, Color='#000000');-ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180, Color='#000000');box-shadow: 0 1px 3px #000;zoom: 1}
+div.wrc_pricing_table div.package_details li.ribbon:before {display: block;width: 0;height: 0;position: absolute;bottom: -15px;right: 0px;content: "";border-color: transparent transparent transparent #cb0000;border-width: 0px 0px 15px 15px;border-style: solid;z-index: -1}
+div.wrc_pricing_table div.package_details li.ribbon:after {border-color: transparent #fe0000 transparent transparent;display: block;width: 0;height: 0;content: "";position: absolute;top: 0px;left: -24px;border-width: 13px 25px 13px 0;border-style: solid;z-index:98}
+div.wrc_pricing_table div.package_details div.ribbon-content {padding: 4px 10px 0 0;text-transform: uppercase;letter-spacing: 1px;text-align: center;font-weight: bold;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);z-index:100}
+
+div.wrc_clear{clear:both}
+
+@media only screen and (max-width : 479px) {div.wrc_pricing_table div.package_caption {display:none}div.wrc_pricing_table div.package_details {width: 99.5%;margin-bottom:10px}}
+@media only screen and (min-width : 480px) and (max-width : 767px) {div.wrc_pricing_table div.package_caption {display:none}div.wrc_pricing_table div.package_details {width: 99.5%;margin-bottom:10px}}
+@media only screen and (min-width : 768px) and (max-width: 1023px) {div.wrc_pricing_table div.package_caption {display:none}div.wrc_pricing_table div.package_details {width: 49.75%;margin-bottom:10px}}
+@media screen and (min-width: 1024px) {div.wrc_pricing_table div.package_caption {width: 23%}div.wrc_pricing_table div.package_details {width: 19.144%;margin-bottom:10px}div.wrc_pricing_table div.package_details span.media_screen {display:none}}
