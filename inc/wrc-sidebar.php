@@ -21,7 +21,7 @@
 				<h3>Plugin Info</h3>
 				<ul class="wrcusage-list">
 					<li>Price: Free!</li>
-					<li>Version: 1.0</li>
+					<li>Version: 1.1</li>
 					<li>Scripts: PHP + JS + CSS</li>
 					<li>Requires: Wordpress 3.5+</li>
 					<li>First release: 6 May 2015</li>

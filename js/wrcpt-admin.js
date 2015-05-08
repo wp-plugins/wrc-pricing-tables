@@ -72,6 +72,36 @@ function wrcptaddpack(ptable) {
 			jQuery("#new_table").hide();
 			jQuery('#sidebar').hide();
 			jQuery(linkid).append(data);
+			jQuery("#auto_column").click(function() {
+				if(jQuery("#auto_column").is(":checked")){
+					jQuery("label#col_width").slideDown("slow");
+					jQuery("input#column_width").slideDown("slow");
+					jQuery("label#cap_col_width").slideDown("slow");
+					jQuery("input#cap_column_width").slideDown("slow");
+				} else {
+					jQuery("label#col_width").slideUp("slow");
+					jQuery("input#column_width").slideUp("slow");
+					jQuery("label#cap_col_width").slideUp("slow");
+					jQuery("input#cap_column_width").slideUp("slow");
+				}
+			});
+			if(jQuery("#auto_column").is(":checked")){
+				jQuery("label#col_width").css("display","block");
+				jQuery("input#column_width").css("display","block");
+			}
+			jQuery("#feature_caption").click(function() {
+				if(jQuery("#feature_caption").is(":checked") && jQuery("#auto_column").is(":checked")){
+					jQuery("label#cap_col_width").slideDown("slow");
+					jQuery("input#cap_column_width").slideDown("slow");
+				} else {
+					jQuery("label#cap_col_width").slideUp("slow");
+					jQuery("input#cap_column_width").slideUp("slow");
+				}
+			});
+			if(jQuery("#feature_caption").is(":checked") && jQuery("#auto_column").is(":checked")){
+				jQuery("label#cap_col_width").css("display","block");
+				jQuery("input#cap_column_width").css("display","block");
+			}
 			jQuery(".table_list").css("width","100%");
 			jQuery("#add_new_table h2").text("Add Pricing Table Column");
 			jQuery(".postbox-container").css("width","100%");
@@ -177,6 +207,36 @@ function wrcpteditpackages(pcount, ptable) {
 			jQuery("#new_table").hide();
 			jQuery('#sidebar').hide();
 			jQuery(linkid).append(data);
+			jQuery("#auto_column").click(function() {
+				if(jQuery("#auto_column").is(":checked")){
+					jQuery("label#col_width").slideDown("slow");
+					jQuery("input#column_width").slideDown("slow");
+					jQuery("label#cap_col_width").slideDown("slow");
+					jQuery("input#cap_column_width").slideDown("slow");
+				} else {
+					jQuery("label#col_width").slideUp("slow");
+					jQuery("input#column_width").slideUp("slow");
+					jQuery("label#cap_col_width").slideUp("slow");
+					jQuery("input#cap_column_width").slideUp("slow");
+				}
+			});
+			if(jQuery("#auto_column").is(":checked")){
+				jQuery("label#col_width").css("display","block");
+				jQuery("input#column_width").css("display","block");
+			}
+			jQuery("#feature_caption").click(function() {
+				if(jQuery("#feature_caption").is(":checked") && jQuery("#auto_column").is(":checked")){
+					jQuery("label#cap_col_width").slideDown("slow");
+					jQuery("input#cap_column_width").slideDown("slow");
+				} else {
+					jQuery("label#cap_col_width").slideUp("slow");
+					jQuery("input#cap_column_width").slideUp("slow");
+				}
+			});
+			if(jQuery("#feature_caption").is(":checked") && jQuery("#auto_column").is(":checked")){
+				jQuery("label#cap_col_width").css("display","block");
+				jQuery("input#cap_column_width").css("display","block");
+			}
 			if(pcount == 1) {
 				jQuery('#wrcpt-1 #delPackage').attr('id', 'delDisable');
 			}

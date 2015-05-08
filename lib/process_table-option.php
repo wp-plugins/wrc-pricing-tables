@@ -208,7 +208,7 @@ function wrcpt_save_pricing_packages() {
 	$pricing_table = $_POST['pricing_table'] != '' ? $_POST['pricing_table'] : '';
 	$pricing_table_name = $_POST['pricing_table_name'] != '' ? trim(preg_replace('/[^A-Za-z0-9-]+/', '_', sanitize_text_field( $_POST['pricing_table_name'] ))) : $pricing_table;
 	$pricing_table = wrcpt_edit_pricing_table($pricing_table, $pricing_table_name);
-	$package_text_values = array( 'maxcol' => 'max_column', 'cwidth' => 'container_width', 'ctsize' => 'caption_size', 'tsize' => 'title_size', 'psbig' => 'price_size_big', 'pssmall' => 'price_size_small', 'btsize' => 'button_text_size', 'rtsize' => 'ribbon_text_size' );
+	$package_text_values = array( 'cwidth' => 'container_width', 'maxcol' => 'max_column', 'colwidth' => 'column_width', 'colgap' => 'column_space', 'capwidth' => 'cap_column_width', 'ctsize' => 'caption_size', 'tsize' => 'title_size', 'psbig' => 'price_size_big', 'pssmall' => 'price_size_small', 'btsize' => 'button_text_size', 'rtsize' => 'ribbon_text_size' );
 	foreach($package_text_values as $key => $value) {
 		if( isset( $_POST[$value] ) ) {
 			$optionValue_text[$key] = sanitize_text_field( $_POST[$value] );
@@ -216,12 +216,13 @@ function wrcpt_save_pricing_packages() {
 	}
 	$wrcpt_option = isset($_POST['wrcpt_option']) ? $_POST['wrcpt_option'] : 'no';
 	$feature_caption = isset($_POST['feature_caption']) ? $_POST['feature_caption'] : 'no';
+	$auto_column = isset($_POST['auto_column']) ? $_POST['auto_column'] : 'no';
 	$enlarge_column = isset($_POST['enlarge_column']) ? $_POST['enlarge_column'] : 'no';
 	$disable_shadow = isset($_POST['disable_shadow']) ? $_POST['disable_shadow'] : 'no';
 	$enable_tooltip = isset($_POST['enable_tooltip']) ? $_POST['enable_tooltip'] : 'no';
 	$enable_ribbon = isset($_POST['enable_ribbon']) ? $_POST['enable_ribbon'] : 'no';
 	$table_option = $pricing_table.'_option';
-	$optionValue_check = array( 'enable' => $wrcpt_option, 'ftcap' => $feature_caption, 'encol' => $enlarge_column, 'dscol' => $disable_shadow, 'entips' => $enable_tooltip, 'enribs' => $enable_ribbon );
+	$optionValue_check = array( 'enable' => $wrcpt_option, 'ftcap' => $feature_caption, 'autocol' => $auto_column, 'encol' => $enlarge_column, 'dscol' => $disable_shadow, 'entips' => $enable_tooltip, 'enribs' => $enable_ribbon );
 	$optionValue = array_merge($optionValue_text, $optionValue_check);
 	add_option($table_option, $optionValue);
 	$package_text_options = array( 'type' => 'package_type', 'price' => 'price_number', 'cent' => 'price_fraction', 'unit' => 'price_unit', 'plan' => 'package_plan', 'btext' => 'button_text', 'blink' => 'button_link', 'rtext' => 'ribbon_text', 'tbcolor' => 'table_bg', 'rbcolor' => 'ribbon_bg', 'tcolor' => 'title_color', 'pcbig' => 'price_color_big', 'rtcolor' => 'ribbon_text_color', 'btcolor' => 'button_text_color', 'bthover' => 'button_text_hover', 'bcolor' => 'button_color', 'bhover' => 'button_hover' );
@@ -286,7 +287,7 @@ function wrcpt_update_pricing_package() {
 	$pricing_table = $_POST['pricing_table'] != '' ? $_POST['pricing_table'] : '';
 	$pricing_table_name = $_POST['pricing_table_name'] != '' ? trim(preg_replace('/[^A-Za-z0-9-]+/', '_', sanitize_text_field( $_POST['pricing_table_name'] ))) : $pricing_table;
 	$pricing_table = wrcpt_edit_pricing_table($pricing_table, $pricing_table_name);
-	$package_text_values = array( 'maxcol' => 'max_column', 'cwidth' => 'container_width', 'ctsize' => 'caption_size', 'tsize' => 'title_size', 'psbig' => 'price_size_big', 'pssmall' => 'price_size_small', 'btsize' => 'button_text_size', 'rtsize' => 'ribbon_text_size' );
+	$package_text_values = array( 'cwidth' => 'container_width', 'maxcol' => 'max_column', 'colwidth' => 'column_width', 'colgap' => 'column_space', 'capwidth' => 'cap_column_width', 'ctsize' => 'caption_size', 'tsize' => 'title_size', 'psbig' => 'price_size_big', 'pssmall' => 'price_size_small', 'btsize' => 'button_text_size', 'rtsize' => 'ribbon_text_size' );
 	foreach($package_text_values as $key => $value) {
 		if( isset( $_POST[$value] ) ) {
 			$optionValue_text[$key] = sanitize_text_field( $_POST[$value] );
@@ -294,12 +295,13 @@ function wrcpt_update_pricing_package() {
 	}
 	$wrcpt_option = isset($_POST['wrcpt_option']) ? $_POST['wrcpt_option'] : 'no';
 	$feature_caption = isset($_POST['feature_caption']) ? $_POST['feature_caption'] : 'no';
+	$auto_column = isset($_POST['auto_column']) ? $_POST['auto_column'] : 'no';
 	$enlarge_column = isset($_POST['enlarge_column']) ? $_POST['enlarge_column'] : 'no';
 	$disable_shadow = isset($_POST['disable_shadow']) ? $_POST['disable_shadow'] : 'no';
 	$enable_tooltip = isset($_POST['enable_tooltip']) ? $_POST['enable_tooltip'] : 'no';
 	$enable_ribbon = isset($_POST['enable_ribbon']) ? $_POST['enable_ribbon'] : 'no';
 	$table_option = $pricing_table.'_option';
-	$optionValue_check = array( 'enable' => $wrcpt_option, 'ftcap' => $feature_caption, 'encol' => $enlarge_column, 'dscol' => $disable_shadow, 'entips' => $enable_tooltip, 'enribs' => $enable_ribbon );
+	$optionValue_check = array( 'enable' => $wrcpt_option, 'ftcap' => $feature_caption, 'autocol' => $auto_column, 'encol' => $enlarge_column, 'dscol' => $disable_shadow, 'entips' => $enable_tooltip, 'enribs' => $enable_ribbon );
 	$optionValue = array_merge($optionValue_text, $optionValue_check);
 	update_option($table_option, $optionValue);
 	wrcpt_delete_pricing_packages($pricing_table, $_POST['pricing_packages']);

@@ -95,6 +95,7 @@ div#settingcolumndiv div.package_advance h3.ptitle {margin: 1px;}
 div#settingcolumndiv div.advance-input label.input-check {width: 280px;line-height: 28px;}
 div#settingcolumndiv div.advance-input input.medium {width: 230px;}
 div#settingcolumndiv div.advance-input input.tickbox {margin: 7px 2px 2px;float:right;border: 1px solid #aaa;}
+div#settingcolumndiv div.advance-input label#col_width, div#settingcolumndiv div.advance-input input#column_width, div#settingcolumndiv div.advance-input label#cap_col_width, div#settingcolumndiv div.advance-input input#cap_column_width {display:none}
 div#settingcolumndiv div.wp-picker-container, div#settingcolumndiv div.wp-picker-container:active {}
 
 /* pricing column tooltip */

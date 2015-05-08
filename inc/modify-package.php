@@ -139,16 +139,24 @@ function wrcpt_edit_pricing_packages() {
 			<div id="accordion_advance" class="package_advance">
 				<h3 class="ptitle">General Settings</h3>
 				<div class="advance-input">
-					<label class="input-title">Modify Pricing Table Name</label>
-					<input type="text" name="pricing_table_name" class="medium" id="pricing_table_name" value="<?php echo $pricing_table_name; ?>" />
-					<label class="input-title">Number of Columns per Row<a href="#" class="wrc_tooltip" rel="If your pricing table has a lot of columns, then you can split the columns according to the rows by entering the number of columns in the right TextBox."></a></label>
-					<input type="number" name="max_column" class="medium" id="max_column" value="<?php echo $packageCombine['maxcol']; ?>" placeholder="e.g. 6" />
-					<label class="input-title">Pricing Table Container Width<a href="#" class="wrc_tooltip" rel="Enter the total width of your pricing table here."></a></label>
-					<input type="text" name="container_width" class="medium" id="container_width" value="<?php echo $packageCombine['cwidth']; ?>" placeholder="e.g. 99%" />
 					<label class="input-check">Enable Pricing Table:
 					<input type="checkbox" name="wrcpt_option" class="tickbox" id="wrcpt_option" value="yes" <?php if($packageCombine['enable'] == 'yes') { ?> checked="checked"  <?php } ?> /></label>
-					<label class="input-check">Enable Feature Items Column:<a href="#" class="wrc_tooltip" rel="If you want to show feature items name separately on the left of the pricing table instead of showing beside each feature values of the pricing columns, then mark this checkbox."></a>
+					<label class="input-title">Modify Pricing Table Name</label>
+					<input type="text" name="pricing_table_name" class="medium" id="pricing_table_name" value="<?php echo $pricing_table_name; ?>" />
+					<label class="input-title">Pricing Table Container Width<a href="#" class="wrc_tooltip" rel="Enter the total width of your pricing table here."></a></label>
+					<input type="text" name="container_width" class="medium" id="container_width" value="<?php echo $packageCombine['cwidth']; ?>" placeholder="e.g. 99%" />
+					<label class="input-title">Number of Columns per Row<a href="#" class="wrc_tooltip" rel="If your pricing table has a lot of columns, then you can split the columns according to the rows by entering the number of columns in the right TextBox."></a></label>
+					<input type="number" name="max_column" class="medium" id="max_column" value="<?php echo $packageCombine['maxcol']; ?>" placeholder="e.g. 6" />
+					<label class="input-title">Space Between Columns</label>
+					<input type="text" name="column_space" class="medium" id="column_space" value="<?php echo $packageCombine['colgap']; ?>" placeholder="e.g. 1px" />
+					<label class="input-check">Disable Auto Column Width:
+					<input type="checkbox" name="auto_column" class="tickbox" id="auto_column" value="yes" <?php if($packageCombine['autocol'] == 'yes') { ?> checked="checked"  <?php } ?> /></label>
+					<label class="input-title" id="col_width">Each Columns Width</label> 
+					<input type="text" name="column_width" class="medium" id="column_width" value="<?php echo $packageCombine['colwidth']; ?>" placeholder="e.g. 200px" />
+					<label class="input-check">Enable Caption Column:<a href="#" class="wrc_tooltip" rel="If you want to show feature items name separately on the left of the pricing table instead of showing beside each feature values of the pricing columns, then mark this checkbox."></a>
 					<input type="checkbox" name="feature_caption" class="tickbox" id="feature_caption" value="yes" <?php if($packageCombine['ftcap'] == 'yes') { ?> checked="checked"  <?php } ?> /></label>
+					<label class="input-title" id="cap_col_width">Caption Column Width</label>
+					<input type="text" name="cap_column_width" class="medium" id="cap_column_width" value="<?php echo $packageCombine['capwidth']; ?>" placeholder="e.g. 250px" />
 					<label class="input-check">Enlarge Column on Hover:
 					<input type="checkbox" name="enlarge_column" class="tickbox" id="enlarge_column" value="yes" <?php if($packageCombine['encol'] == 'yes') { ?> checked="checked"  <?php } ?> /></label>
 					<label class="input-check">Disable Shadow on Highlight:

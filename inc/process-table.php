@@ -74,7 +74,7 @@ $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
 									<span id="view_package" onclick="wrcptviewpack(<?php echo $tableId; ?>, '<?php echo $list; ?>')">Preview</span>
 									<span id="remTable" onclick="wrcptdeletetable('<?php echo $list; ?>')">Delete</span>
 								</td>
-								<td class="wrc_shortcode"><?php echo '[wrc-pricing-table id="'.$tableId.'"]'; ?></td>
+								<td class="wrc_shortcode"><input type="text" name="wrc_shortcode" value="[wrc-pricing-table id='<?php echo $tableId; ?>']" /></td>
 								<td><?php if($packageCombine['enable'] == 'yes') {_e('Yes');} else {_e('No');} ?></td>
 							</tr>
 						</tbody>
