@@ -1,9 +1,9 @@
 === WRC Pricing Tables ===
 Contributors: moviehour
 Requires at least: 3.5
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Tags: responsive pricing table, pricing table, price table, package, special offer, page, plugin, Post, posts, price, price comparison chart, price gird, table, css3, comparison table, pricing box
-Stable Tag: 1.0
+Stable Tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,12 @@ You can watch the demo of the pro version of this plugin here, but the pro versi
 == Changelog ==
 
 = 1.0 (6th May, 2015) = 
-* First release.
+* 1st release.
+
+= 1.1 (8th May, 2015) = 
+* 2nd release.
+* Fixed space between columns issue.
+* Added an option to allow setting column-width.
 
 
 == Installation ==

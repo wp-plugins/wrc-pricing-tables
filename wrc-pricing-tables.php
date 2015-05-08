@@ -2,8 +2,8 @@
 /*
 Plugin Name: WordPress Responsive CSS3 Pricing Tables
 Plugin URI: http://wordpress.org/plugins/wrc-pricing-tables/
-Version: 1.0
-Description: WRC Pricing Tables is a WordPress Responsive CSS3 plugin which allows you to display pricing tables on different posts or pages by SHORTCODE.
+Version: 1.1
+Description: This plugin has been created to display pricing tables on WordPress. It is responsive, beautiful and very easy to use.
 Author: Iftekhar
 Author URI: http://profiles.wordpress.org/moviehour/
 */
@@ -83,12 +83,17 @@ function wrc_pricing_table_shortcode( $atts, $content = null ) {
 	$packageOptions = explode(', ', $package_lists);
 	$package_count = count($packageOptions);
 	if($packageCombine) {
-		if($package_count > $packageCombine['maxcol']) {
-			$width = ($packageCombine['cwidth'])/$packageCombine['maxcol'];
-			$cap_width = ($packageCombine['cwidth'])/($packageCombine['maxcol']+1);
+		if($packageCombine['autocol'] == 'no') {
+			if($package_count > $packageCombine['maxcol']) {
+				$width = ($packageCombine['cwidth']-(($packageCombine['colgap']-2)/2))/$packageCombine['maxcol'] . '%';
+				$cap_width = ($packageCombine['cwidth']-(($packageCombine['colgap']-1)/2))/($packageCombine['maxcol']+1) . '%';
+			} else {
+				$width = ($packageCombine['cwidth']-(($packageCombine['colgap']-2)/2))/$package_count . '%';
+				$cap_width = ($packageCombine['cwidth']-(($packageCombine['colgap']-1)/2))/($package_count+1) . '%';
+			}
 		} else {
-			$width = ($packageCombine['cwidth'])/$package_count;
-			$cap_width = ($packageCombine['cwidth'])/($package_count+1);
+			$width = $packageCombine['colwidth'];
+			$cap_width = $packageCombine['capwidth'];
 		}
 	}
 ?>
@@ -103,13 +108,15 @@ function wrc_pricing_table_shortcode( $atts, $content = null ) {
 					<style type="text/css">
 					<?php if($packageCombine['ftcap'] != "yes") { ?>
 						@media screen and (min-width: 1024px) {
-							div.wrc_pricing_table div.package_details {width: <?php echo $width; ?>%}
+							div.wrc_pricing_table {margin:0 <?php echo $packageCombine['colgap']; ?>}
+							div.wrc_pricing_table div.package_details {margin-right:<?php echo $packageCombine['colgap']; ?>;width: <?php echo $width; ?>}
 						}
 					<?php } else { ?>
 						@media screen and (min-width: 1024px) {
+							div.wrc_pricing_table {margin:0 <?php echo $packageCombine['colgap']; ?>}
 							div.wrcpt_content h2.caption {font-size: <?php echo $packageCombine['ctsize']; ?>}
-							div.wrc_pricing_table div.package_caption {width: <?php echo $cap_width; ?>%;}
-							div.wrc_pricing_table div.package_details {width: <?php echo $cap_width; ?>%; margin-bottom:10px}
+							div.wrc_pricing_table div.package_caption {width: <?php echo $cap_width; ?>;margin-right:<?php echo $packageCombine['colgap']; ?>}
+							div.wrc_pricing_table div.package_details {width: <?php if($packageCombine['autocol'] == 'no') { echo $cap_width; } else { echo $width; } ?>;margin-right:<?php echo $packageCombine['colgap']; ?>;margin-bottom:10px}
 						}
 					<?php } ?>
 					<?php if($packageCombine['encol'] != "yes") { ?>
@@ -161,7 +168,7 @@ function wrc_pricing_table_shortcode( $atts, $content = null ) {
 					div.wrc_pricing_table div.package_details li.color-<?php echo $packageType['pid']; ?> {background: -moz-linear-gradient(<?php echo $tlight; ?>, <?php echo $tdark; ?>);background: -webkit-linear-gradient(<?php echo $tlight; ?>, <?php echo $tdark; ?>);background: -o-linear-gradient(<?php echo $tlight; ?>, <?php echo $tdark; ?>);background: -ms-linear-gradient(<?php echo $tlight; ?>, <?php echo $tdark; ?>);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $tlight; ?>', endColorstr='<?php echo $tdark; ?>',GradientType=1);-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $tlight; ?>', endColorstr='<?php echo $tdark; ?>',GradientType=1);background: linear-gradient(<?php echo $tlight; ?>, <?php echo $tdark; ?>);}
 					div.wrc_pricing_table div.package_details h1.txcolor-<?php echo $packageType['pid']; ?> {font-size: <?php echo $packageCombine['psbig']; ?>;color: <?php echo $packageType['pcbig']; ?>;}
 					div.wrc_pricing_table div.package_details h1.txcolor-<?php echo $packageType['pid']; ?> span.unit, div.wrc_pricing_table div.package_details h1.txcolor-<?php echo $packageType['pid']; ?> span.cent {font-size: <?php echo $packageCombine['pssmall']; ?>}
-					div.wrc_pricing_table div.package_details li.plan-<?php echo $packageType['pid']; ?> {background: <?php echo $packageType['tbcolor']; ?>;line-height: 120px}
+					div.wrc_pricing_table div.package_details li.plan-<?php echo $packageType['pid']; ?> {background: <?php echo $packageType['tbcolor']; ?>;line-height: 120px;  z-index: -1}
 					div.wrc_pricing_table div.package_details li.bbcolor-<?php echo $packageType['pid']; ?> {background: <?php echo $packageType['tbcolor']; ?>}
 					div.wrc_pricing_table div.package_details li.button-<?php echo $packageType['pid']; ?> a.action_button {background: -moz-linear-gradient(<?php echo $blight; ?>, <?php echo $packageType['bcolor']; ?>);background: -webkit-linear-gradient(<?php echo $blight; ?>, <?php echo $packageType['bcolor']; ?>);background: -o-linear-gradient(<?php echo $blight; ?>, <?php echo $packageType['bcolor']; ?>);background: -ms-linear-gradient(<?php echo $blight; ?>, <?php echo $packageType['bcolor']; ?>);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $blight; ?>', endColorstr='<?php echo $packageType['bcolor']; ?>',GradientType=1 );-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $blight; ?>', endColorstr='<?php echo $packageType['bcolor']; ?>',GradientType=1 );background: linear-gradient(<?php echo $blight; ?>, <?php echo $packageType['bcolor']; ?>);border:1px solid <?php echo $packageType['bcolor']; ?>;font-size: <?php echo $packageCombine['btsize']; ?>;color: <?php echo $packageType['btcolor']; ?>;}
 					div.wrc_pricing_table div.package_details li.button-<?php echo $packageType['pid']; ?> a.action_button:hover {background: -moz-linear-gradient(<?php echo $bdark; ?>, <?php echo $packageType['bhover']; ?>);background: -webkit-linear-gradient(<?php echo $bdark; ?>, <?php echo $packageType['bhover']; ?>);background: -o-linear-gradient(<?php echo $bdark; ?>, <?php echo $packageType['bhover']; ?>);background: -ms-linear-gradient(<?php echo $bdark; ?>, <?php echo $packageType['bhover']; ?>);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bdark; ?>', endColorstr='<?php echo $packageType['bhover']; ?>',GradientType=1 );-ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?php echo $bdark; ?>', endColorstr='<?php echo $packageType['bhover']; ?>',GradientType=1 );background: linear-gradient(<?php echo $bdark; ?>, <?php echo $packageType['bhover']; ?>);color: <?php echo $packageType['bthover']; ?>;}
