@@ -76,8 +76,10 @@ function wrcptaddpack(ptable) {
 				if(jQuery("#auto_column").is(":checked")){
 					jQuery("label#col_width").slideDown("slow");
 					jQuery("input#column_width").slideDown("slow");
-					jQuery("label#cap_col_width").slideDown("slow");
-					jQuery("input#cap_column_width").slideDown("slow");
+					if(jQuery("#feature_caption").is(":checked")) {
+						jQuery("label#cap_col_width").slideDown("slow");
+						jQuery("input#cap_column_width").slideDown("slow");
+					}
 				} else {
 					jQuery("label#col_width").slideUp("slow");
 					jQuery("input#column_width").slideUp("slow");

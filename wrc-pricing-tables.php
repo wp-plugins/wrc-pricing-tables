@@ -42,7 +42,7 @@ function enable_pricing_package_form() {
 add_action('admin_init', 'enable_pricing_package_form');
 function wrcpt_enqueue_scripts() {
 	wp_enqueue_style('wrcptfront', plugins_url( 'css/wrcpt-front.css', __FILE__ ), '', '1.0');
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto+Condensed');
+	wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Roboto+Condensed');
 	wp_enqueue_style( 'googleFonts');
 }
 add_action('wp_enqueue_scripts', 'wrcpt_enqueue_scripts');
