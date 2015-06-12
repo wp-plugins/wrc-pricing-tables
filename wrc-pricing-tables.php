@@ -28,7 +28,7 @@ define('WRCPT_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
 if(is_admin()) { include ( WRCPT_PLUGIN_PATH . 'inc/admin-menu.php' ); }
 
 function enable_pricing_package_form() {
-	wp_register_script('wrcptjs', plugins_url( 'js/wrcpt-admin.js', __FILE__ ), array('jquery'), '1.0');
+	wp_register_script('wrcptjs', plugins_url( 'js/wrcpt-admin.min.js', __FILE__ ), array('jquery'), '1.0');
 	wp_enqueue_script('wrcptjs');
 	wp_enqueue_script('jquery-ui-sortable');
 	wp_enqueue_script('jquery-ui-accordion');

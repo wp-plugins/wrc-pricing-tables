@@ -22,7 +22,7 @@ function wrcpt_add_pricing_packages() {
 			  				<input type="text" name="package_type[]" class="medium" id="package_type" value="" placeholder="e.g. Enterprise" /><hr />
 							<h4>Package Pricing<a href="#" class="wrc_tooltip" rel="Enter package price, unit (currency) and plan here."></a></h4>
 			  				<label class="input-title">Package Price</label>
-			  				<input name="price_number[]" type="number" class="col_price" value="" placeholder="0" />&nbsp;.&nbsp;<input name="price_fraction[]" type="number" class="col_price" value="" min="0" max="99" placeholder="00" />
+			  				<input name="price_number[]" type="text" class="col_price" value="" placeholder="0" />&nbsp;.&nbsp;<input name="price_fraction[]" type="number" class="col_price" value="" min="0" max="99" placeholder="00" />
 			  				<label class="input-title">Price Unit</label>
 			  				<input name="price_unit[]" id="price_unit" type="text" class="medium" value="" placeholder="e.g. $" />
 			  				<label class="input-title">Price Plan</label>
@@ -35,11 +35,11 @@ function wrcpt_add_pricing_packages() {
 								<?php if($package_feature['ftype'.$i] == 'text') { ?>
 									<label class="input-title"><?php echo $package_feature['fitem'.$i]; ?></label>
 									<input type="text" class="medium" name="feature_value[]" id="feature_value" value="" placeholder="Feature Value" />
-									<textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" maxlength="120" placeholder="Enter Tooltip"></textarea><hr />
+									<textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" placeholder="Enter Tooltip"></textarea><hr />
 								<?php } else { ?>
 									<label class="input-check"><?php echo $package_feature['fitem'.$i]; ?></label>
 									<input type="checkbox" name="feature_value[]" class="tickbox" id="feature_value" value="<?php echo $checkValue; ?>" /> 
-									<textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" maxlength="120" placeholder="Enter Tooltip"></textarea><hr />
+									<textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" placeholder="Enter Tooltip"></textarea><hr />
 								<?php } ?>
 			  				<?php
 			  					}
