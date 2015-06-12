@@ -3,7 +3,7 @@ Contributors: moviehour
 Requires at least: 3.5
 Tested up to: 4.2.2
 Tags: responsive pricing table, pricing table, price table, package, special offer, page, plugin, Post, posts, price, price comparison chart, price gird, table, css3, comparison table, pricing box
-Stable Tag: 1.1
+Stable Tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

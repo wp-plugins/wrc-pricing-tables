@@ -35,7 +35,7 @@ function wrcpt_edit_pricing_packages() {
 							<input type="text" name="package_type[]" class="medium" id="package_type" value="<?php echo $packageValue['type']; ?>" /><hr />
 							<h4>Package Pricing<a href="#" class="wrc_tooltip" rel="Enter package price, unit (currency) and plan here."></a></h4>
 							<label class="input-title">Package Price</label>
-							<input name="price_number[]" type="number" class="col_price" value="<?php echo $packageValue['price']; ?>" />&nbsp;.&nbsp;<input name="price_fraction[]" type="number" class="col_price" value="<?php echo $packageValue['cent']; ?>" min="0" max="99" placeholder="00" />
+							<input name="price_number[]" type="text" class="col_price" value="<?php echo $packageValue['price']; ?>" />&nbsp;.&nbsp;<input name="price_fraction[]" type="number" class="col_price" value="<?php echo $packageValue['cent']; ?>" min="0" max="99" placeholder="00" />
 							<label class="input-title">Price Unit</label>
 							<input name="price_unit[]" id="price_unit" type="text" class="medium" value="<?php echo $packageValue['unit']; ?>" />
 							<label class="input-title">Price Plan</label>
@@ -50,9 +50,9 @@ function wrcpt_edit_pricing_packages() {
 									}
 							?>
 									<?php if($package_feature['ftype'.$i] == 'text') { ?>
-										<label class="input-title"><?php echo $package_feature['fitem'.$i]; ?></label><input type="text" class="medium" name="feature_value[]" id="feature_value" value="<?php echo $f_value; ?>" placeholder="Feature Value" /><textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" maxlength="120" placeholder="Enter Tooltip"><?php echo $f_tips; ?></textarea><hr />
+										<label class="input-title"><?php echo $package_feature['fitem'.$i]; ?></label><input type="text" class="medium" name="feature_value[]" id="feature_value" value="<?php echo $f_value; ?>" placeholder="Feature Value" /><textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" placeholder="Enter Tooltip"><?php echo $f_tips; ?></textarea><hr />
 									<?php } else { ?>
-										<label class="input-check"><?php echo $package_feature['fitem'.$i]; ?></label><input type="checkbox" class="tickbox" name="feature_value[<?php echo 'ftype'.$cf; ?>]" id="feature_value" value="<?php echo $checkValue; ?>"<?php if($f_value == 'yes') {?> checked="checked"<?php } ?> /><textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" maxlength="120" placeholder="Enter Tooltip"><?php echo $f_tips; ?></textarea><hr />
+										<label class="input-check"><?php echo $package_feature['fitem'.$i]; ?></label><input type="checkbox" class="tickbox" name="feature_value[<?php echo 'ftype'.$cf; ?>]" id="feature_value" value="<?php echo $checkValue; ?>"<?php if($f_value == 'yes') {?> checked="checked"<?php } ?> /><textarea name="tooltips[]" id="tooltips" class="medium" cols="27" rows="2" placeholder="Enter Tooltip"><?php echo $f_tips; ?></textarea><hr />
 									<?php $cf++; } $fv++;
 								}
 							} else { echo '<label class="input-title">There are no feature items!</label>'; }
