@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Responsive CSS3 Pricing Tables
 Plugin URI: http://wordpress.org/plugins/wrc-pricing-tables/
-Version: 1.1
+Version: 1.2
 Description: This plugin has been created to display pricing tables on WordPress. It is responsive, beautiful and very easy to use.
 Author: Iftekhar
 Author URI: http://profiles.wordpress.org/moviehour/
@@ -28,20 +28,20 @@ define('WRCPT_PLUGIN_PATH', plugin_dir_path( __FILE__ ));
 if(is_admin()) { include ( WRCPT_PLUGIN_PATH . 'inc/admin-menu.php' ); }
 
 function enable_pricing_package_form() {
-	wp_register_script('wrcptjs', plugins_url( 'js/wrcpt-admin.min.js', __FILE__ ), array('jquery'), '1.0');
+	wp_register_script('wrcptjs', plugins_url( 'js/wrcpt-admin.min.js', __FILE__ ), array('jquery'), '1.2');
 	wp_enqueue_script('wrcptjs');
 	wp_enqueue_script('jquery-ui-sortable');
 	wp_enqueue_script('jquery-ui-accordion');
 	wp_enqueue_script('wp-color-picker');
 	wp_localize_script('wrcptjs', 'wrcptajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	wp_enqueue_style('wp-color-picker');
-	wp_enqueue_style('wrcptfront', plugins_url( 'css/wrcpt-front.css', __FILE__ ), '', '1.0');
-	wp_enqueue_style('wrcptadmin', plugins_url( 'css/wrcpt-admin.css', __FILE__ ), '', '1.0');
+	wp_enqueue_style('wrcptfront', plugins_url( 'css/wrcpt-front.css', __FILE__ ), '', '1.2');
+	wp_enqueue_style('wrcptadmin', plugins_url( 'css/wrcpt-admin.css', __FILE__ ), '', '1.2');
 	wp_enqueue_style('jquery-ui-style', plugins_url( 'css/jquery-accordion.css', __FILE__ ), '', '1.10.4');
 }
 add_action('admin_init', 'enable_pricing_package_form');
 function wrcpt_enqueue_scripts() {
-	wp_enqueue_style('wrcptfront', plugins_url( 'css/wrcpt-front.css', __FILE__ ), '', '1.0');
+	wp_enqueue_style('wrcptfront', plugins_url( 'css/wrcpt-front.css', __FILE__ ), '', '1.2');
 	wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Roboto+Condensed');
 	wp_enqueue_style( 'googleFonts');
 }
